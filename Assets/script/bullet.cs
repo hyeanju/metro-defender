@@ -20,7 +20,7 @@ public class bullet : MonoBehaviour
         }
         else
         {
-            transform.Translate(transform.right * speed * Time.deltaTime * (-1));
+            transform.Translate(transform.right* (-1) * speed * Time.deltaTime);
         }
     }
 
@@ -28,7 +28,6 @@ public class bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Wall")
         {
-            Debug.Log("Ãæµ¹");
             Destroy(gameObject);
         }
     }
