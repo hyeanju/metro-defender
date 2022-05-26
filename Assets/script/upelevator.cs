@@ -7,6 +7,7 @@ public class upelevator : MonoBehaviour
 {
     public GameObject Upicon;
     public Text press;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,13 @@ public class upelevator : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Upicon.SetActive(true);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            player.transform.position = new Vector3(0, 0, 0);
         }
     }
     private void OnTriggerExit2D(Collider2D other)

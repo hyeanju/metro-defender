@@ -26,16 +26,6 @@ public class Playerwalk : MonoBehaviour
             spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
         }
     }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Elevator")
-        {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                transform.position = new Vector3(0, 2, 0);
-            }
-        }
-    }
     // Update is called once per frame
     void FixedUpdate()
     {
