@@ -11,7 +11,7 @@ public class upelevator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,7 +22,7 @@ public class upelevator : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetButtonDown("interaction"))
         {
             player.transform.position = new Vector3(0, 0, 0);
         }

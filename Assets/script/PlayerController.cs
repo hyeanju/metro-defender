@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playerwalk : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float move = 5.0f;
+    public bool isLeft = false;
+    public float cooltime;
+    private float curtime;
+    public GameObject bullet;
+    public Transform pos;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
     private Vector3 movement;
@@ -21,10 +26,24 @@ public class Playerwalk : MonoBehaviour
     void Update()
     {
         //direction change
-        if (Input.GetButtonDown("Horizontal"))
+        if (isLeft == true)
         {
-            spriteRenderer.flipX = Input.GetAxisRaw("Horizontal") == -1;
+            transform.eulerAngles = new Vector3(0, 180, 0);
         }
+        else if (isLeft == false)
+        {
+            transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+        //attack
+        if (curtime <= 0)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                Instantiate(bullet, pos.position, transform.rotation);
+            }
+            curtime = cooltime;
+        }
+        curtime -= Time.deltaTime;
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -36,18 +55,18 @@ public class Playerwalk : MonoBehaviour
     {
         Vector3 moveVelocity = Vector3.zero;
 
-        if(Input.GetAxisRaw("Horizontal")<0)
+        if (Input.GetAxisRaw("Horizontal") < 0)
         {
             anim.SetBool("isWalkR", true);
             moveVelocity = Vector3.left;
-            spriteRenderer.flipX = true;
+            isLeft = true;
 
         }
-        else if(Input.GetAxis("Horizontal")>0)
+        else if (Input.GetAxis("Horizontal") > 0)
         {
             anim.SetBool("isWalkR", true);
             moveVelocity = Vector3.right;
-            spriteRenderer.flipX = false;
+            isLeft = false;
         }
         else
         {

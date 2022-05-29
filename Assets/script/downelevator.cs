@@ -22,9 +22,9 @@ public class downelevator : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetButtonDown("interaction"))
         {
-            player.transform.position = new Vector3(0, -3, 0);
+            player.transform.position = new Vector3(0, -5, 0);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
