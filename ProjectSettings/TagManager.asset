@@ -5,13 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - Elevator
   - Enemy
+  - Ladder
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - enemy
   - Water
   - UI
   - 

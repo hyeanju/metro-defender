@@ -6,13 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     public float move = 5.0f;
     public bool isLeft = false;
+
     public float cooltime;
     private float curtime;
+
     public GameObject bullet;
     public Transform pos;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
+
     private Vector3 movement;
+
     Animator anim;
 
     // Start is called before the first frame update
@@ -39,9 +43,11 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
+                anim.SetBool("isshot", true);
                 Instantiate(bullet, pos.position, transform.rotation);
             }
             curtime = cooltime;
+            anim.SetBool("isshot", false);
         }
         curtime -= Time.deltaTime;
     }
