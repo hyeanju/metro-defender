@@ -16,7 +16,7 @@ public class Maincamera : MonoBehaviour
     {
         Vector3 vector3 = new Vector3();
         vector3= playerObject.transform.position;
-        vector3.y = playerObject.transform.position.y + 8;
+        vector3.y = playerObject.transform.position.y + 7;
         vector3.z = -10;
         transform.position = vector3;
     }

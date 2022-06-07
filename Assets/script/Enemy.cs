@@ -7,10 +7,20 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     public int hp = 100;
     public float speed;
-    public GameObject target;
+    bool move = true;
+    public GameObject eneitem;
+    public Transform pos;
+    public Vector2 box;
+    Animator anim;
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     void Start()
     {
-        
+        anim.SetBool("isWalk", true);
     }
 
     // Update is called once per frame
@@ -18,15 +28,17 @@ public class Enemy : MonoBehaviour
     {
         Vector3 vector3 = new Vector3();
         vector3.x = this.transform.position.x;
-
-        if (vector3.x > 0)
+        if(move == true)
         {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.eulerAngles = new Vector3(0, 180, 0);
-            transform.Translate(Vector2.left * speed *Time.deltaTime);
+            if (vector3.x > 0)
+            {
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+            }
+            else
+            {
+                transform.eulerAngles = new Vector3(0, 180, 0);
+                transform.Translate(Vector2.left * speed * Time.deltaTime);
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -43,7 +55,25 @@ public class Enemy : MonoBehaviour
         }
     }
 
-public void GetDamage(int damage)
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isAtk", true);
+            anim.SetBool("isWalk", false);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isAtk", false);
+            anim.SetBool("isWalk", true);
+        }
+    }
+
+    public void GetDamage(int damage)
     {
         hp -= damage;
         if(hp<=0)
@@ -51,8 +81,12 @@ public void GetDamage(int damage)
             Die();
         }
     }
+
     void Die()
     {
-        Destroy(gameObject);
+        move = false; 
+        anim.SetBool("isDie", true);
+        Destroy(gameObject,1);
+        GameObject Item = Instantiate(eneitem, transform.position, transform.rotation);
     }
 }

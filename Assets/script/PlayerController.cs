@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float move = 5.0f;
     public bool isLeft = false;
+    public int eneitem;
 
     public float cooltime;
     private float curtime;
@@ -43,11 +44,14 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Space))
             {
-                anim.SetBool("isshot", true);
+                anim.SetBool("isShot", true);
                 Instantiate(bullet, pos.position, transform.rotation);
             }
+            else
+            {
+                anim.SetBool("isShot", false);
+            }
             curtime = cooltime;
-            anim.SetBool("isshot", false);
         }
         curtime -= Time.deltaTime;
     }
@@ -55,6 +59,14 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "eneitem")
+        {
+            eneitem++;
+        }
     }
 
     void Move()

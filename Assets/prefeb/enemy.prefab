@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5012694170311131642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5422273694258021830}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5422273694258021830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012694170311131642}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14.053356}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5304176719755795544}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5304176719755795540
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +43,7 @@ GameObject:
   - component: {fileID: 5304176719755795543}
   - component: {fileID: 5304176719755795547}
   - component: {fileID: 2628628598088549080}
+  - component: {fileID: 8298013789992869059}
   m_Layer: 3
   m_Name: enemy
   m_TagString: Enemy
@@ -29,8 +60,9 @@ Transform:
   m_GameObject: {fileID: 5304176719755795540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
-  m_Children: []
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5422273694258021830}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1689089035254282767, guid: 6f2b5ab96e2f8a1418fb4ca752aff1d3, type: 3}
+  m_Sprite: {fileID: -323844894188294743, guid: 3fa78a0508935e4479b5b10d11982bb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -120,7 +152,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 100
   speed: 3
-  target: {fileID: 0}
+  eneitem: {fileID: 8350605299874662999, guid: be5403d718aea9541aa4a33a11a0c564, type: 3}
+  pos: {fileID: 5422273694258021830}
+  box: {x: 3, y: 3}
 --- !u!60 &2628628598088549080
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +172,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.25, y: 4.5}
+    oldSize: {x: 7.875, y: 9}
     newSize: {x: 1.625, y: 2.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,10 +180,32 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -1.625, y: 2.25}
-      - {x: -1.625, y: -2.25}
-      - {x: 0.7591052, y: -2.252677}
-      - {x: 1.6248968, y: -0.75026894}
-      - {x: 1.6265239, y: -0.25090075}
-      - {x: 1.1247576, y: -0.00024366379}
-      - {x: 1.124757, y: 2.2497659}
+    - - {x: -2.1069186, y: 4.497894}
+      - {x: -3.934831, y: 1.3824703}
+      - {x: -3.9375715, y: -0.49498594}
+      - {x: 0.9358461, y: -4.001849}
+      - {x: 2.688672, y: -4.0018497}
+      - {x: 3.1915088, y: -3.11829}
+      - {x: 3.5678358, y: 0.10766101}
+      - {x: 3.9390748, y: 1.3679241}
+      - {x: 3.937742, y: 2.749721}
+      - {x: 2.8134837, y: 4.498199}
+--- !u!95 &8298013789992869059
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5304176719755795540}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8730ea28a218cd4fa6394f74c45edc8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
