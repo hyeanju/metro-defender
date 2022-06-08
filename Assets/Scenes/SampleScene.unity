@@ -1347,7 +1347,7 @@ MonoBehaviour:
   move: 5
   isLeft: 0
   eneitem: 0
-  cooltime: 0.9
+  cooltime: 0.5
   bullet: {fileID: 8442903022176357999, guid: 1fb05eef56bd7c14a892265ea2e8ff95, type: 3}
   pos: {fileID: 1222168611}
 --- !u!95 &1997560503

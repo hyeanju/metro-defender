@@ -10,7 +10,7 @@ public class bullet : MonoBehaviour
 
     void Start()
     {
-        Invoke("DestroyBullet", 2);
+        Invoke("DestroyBullet", 5);
     }
 
     // Update is called once per frame
