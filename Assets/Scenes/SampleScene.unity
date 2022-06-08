@@ -485,7 +485,6 @@ MonoBehaviour:
   damage: 20
   make: 0
   gearcount: 10
-  gear: {fileID: 5219433957311069404, guid: e348ad75f20a25e4db5f3940e8c8c0a2, type: 3}
 --- !u!61 &274793699
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -551,7 +550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8eb264f797d75b94fbf18f4c04e72d45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

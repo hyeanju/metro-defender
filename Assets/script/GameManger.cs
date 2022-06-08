@@ -17,16 +17,16 @@ public class GameManger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!isgameover)
-        {
-
-        }
-        else
+        if(isgameover)
         {
             if(Input.GetKeyDown(KeyCode.R))
             {
                 SceneManager.LoadScene("SampleScene");
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            finishgame();
         }
     }
 
@@ -34,5 +34,10 @@ public class GameManger : MonoBehaviour
     {
         isgameover = true;
         gameoverText.SetActive(true);
+    }
+
+    public void finishgame()
+    {
+        Application.Quit();
     }
 }

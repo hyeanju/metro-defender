@@ -5,14 +5,13 @@ using UnityEngine;
 public class Grinder : MonoBehaviour
 {
     public float SpawnRate=0.2f;
-    public int hp = 100;
+    public int hp = 200;
     public float MakeTime;
     public float cooltime;
     private float curtime;
     public int damage = 10;
     public bool make = false;
     public int gearcount = 10;
-    public GameObject gear;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,20 +21,7 @@ public class Grinder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(make == true)
-        {
-            MakeTime += Time.deltaTime;
-            if (MakeTime >= SpawnRate)
-            {
-                MakeTime = 0f;
-                GameObject Gear = Instantiate(gear, transform.position, transform.rotation);
-                gearcount = gearcount - 1;
-            }
-            if(gearcount == 0)
-            {
-                make = false;
-            }
-        }
+
     }
     public void OnTriggerStay2D(Collider2D other)
     {
@@ -44,7 +30,6 @@ public class Grinder : MonoBehaviour
             PlayerController playerController = other.GetComponent<PlayerController>();
             if(playerController.eneitem >= 10)
             {
-                Debug.Log(" gp");
                 if (Input.GetButtonDown("interaction"))
                 {
                     playerController.eneitem = 0;
@@ -70,9 +55,8 @@ public class Grinder : MonoBehaviour
 
     public void Die()
     {
-        gameObject.SetActive(false);
-
         GameManger gamemanager = FindObjectOfType<GameManger>();
         gamemanager.EndGame();
+        Destroy(gameObject);
     }
 }

@@ -7,25 +7,20 @@ public class Enemyitem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("erase",4.0f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if (other.tag == "Player")
         {
-            erase();
+            Destroy(gameObject);
         }
-    }
-
-    void erase()
-    {
-        Destroy(gameObject);
     }
 }
