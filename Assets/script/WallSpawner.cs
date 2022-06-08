@@ -26,20 +26,16 @@ public class WallSpawner : MonoBehaviour
         PlayerController playerController = other.GetComponent<PlayerController>();
         if (other.tag == "Player")
         {
-            if (playerController.gear >= 10)
+            if (Input.GetKey("w"))
             {
-                if (Input.GetKey("w"))
+                TimeRate += Time.deltaTime;
+                if (TimeRate >= moveRate)
                 {
-                    Debug.Log("Çì¿¨");
-                    TimeRate += Time.deltaTime;
-                    if (TimeRate >= moveRate)
-                    {
-                        TimeRate = 0f;
-                        broken.SetActive(false);
-                        wall.SetActive(true);
-                    }
-
+                    TimeRate = 0f;
+                    broken.SetActive(false);
+                    wall.SetActive(true);
                 }
+
             }
         }
     }

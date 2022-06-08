@@ -1,49 +1,94 @@
 fileFormatVersion: 2
-guid: 79c2967b1e356544fb25f4280359f17c
+guid: 891ddbee94de01e47a99683d32b7a51b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2415175953819196879
-    second: wall_droken_anime_0
+      213: -8092295105046505211
+    second: explosion_0
   - first:
-      213: -1923497829122026716
-    second: wall_droken_anime_1
+      213: -5243772346084840235
+    second: explosion_1
   - first:
-      213: 1883742482362860373
-    second: wall_droken_anime_2
+      213: -4009157606203222040
+    second: explosion_2
   - first:
-      213: 6661287301656591333
-    second: wall_droken_anime_3
+      213: 3730887761424324059
+    second: explosion_3
   - first:
-      213: 6848398631062875390
-    second: wall_droken_anime_4
+      213: -4927540249515241657
+    second: explosion_4
   - first:
-      213: -8093716210356022030
-    second: wall_droken_anime_5
+      213: 5684552838703836615
+    second: explosion_5
   - first:
-      213: -2317492914564831755
-    second: wall_droken_anime_6
+      213: -1000500801407918923
+    second: explosion_6
   - first:
-      213: 8621266812626483024
-    second: wall_droken_anime_7
+      213: -3556220708966662747
+    second: explosion_7
   - first:
-      213: -8107822516700153976
-    second: wall_droken_anime_8
+      213: 950242065716622878
+    second: explosion_8
   - first:
-      213: -3555099252764454785
-    second: wall_droken_anime_9
+      213: 1871906383385562927
+    second: explosion_9
   - first:
-      213: -5230468597955788629
-    second: wall_droken_anime_10
+      213: -5371098934410574880
+    second: explosion_10
   - first:
-      213: -4055011694913352644
-    second: wall_droken_anime_11
+      213: -1551774312519300948
+    second: explosion_11
   - first:
-      213: -869244063853599258
-    second: wall_droken_anime_12
+      213: 8761117149865828687
+    second: explosion_12
   - first:
-      213: -534964189404192017
-    second: wall_droken_anime_13
+      213: 2349602722129606322
+    second: explosion_13
+  - first:
+      213: 7773491377804077996
+    second: explosion_14
+  - first:
+      213: 1467323325375670837
+    second: explosion_15
+  - first:
+      213: 4542189021846940948
+    second: explosion_16
+  - first:
+      213: -8590846737339631838
+    second: explosion_17
+  - first:
+      213: 3996794502770762282
+    second: explosion_18
+  - first:
+      213: -5328293131749856865
+    second: explosion_19
+  - first:
+      213: 8757869890930774319
+    second: explosion_20
+  - first:
+      213: 5583760979089145045
+    second: explosion_21
+  - first:
+      213: -6611490010577821925
+    second: explosion_22
+  - first:
+      213: 3700629028062089341
+    second: explosion_23
+  - first:
+      213: 4321349126066106873
+    second: explosion_24
+  - first:
+      213: 8258980228945939678
+    second: explosion_25
+  - first:
+      213: 5457886006356025943
+    second: explosion_26
+  - first:
+      213: 835678513910153455
+    second: explosion_27
+  - first:
+      213: -2014795597190648048
+    second: explosion_28
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -88,7 +133,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -133,13 +178,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wall_droken_anime_0
+      name: explosion_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 0
-        width: 32
-        height: 96
+        x: 648
+        y: 6
+        width: 110
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcd557ddbbd648120800000000000000
-      internalID: 2415175953819196879
+      spriteID: 509121e0a7462bf80800000000000000
+      internalID: -8092295105046505211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_1
+      name: explosion_1
       rect:
         serializedVersion: 2
-        x: 126
-        y: 0
-        width: 32
-        height: 96
+        x: 770
+        y: 6
+        width: 120
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42352f06aec5e45e0800000000000000
-      internalID: -1923497829122026716
+      spriteID: 5dca89c75d06a37b0800000000000000
+      internalID: -5243772346084840235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_2
+      name: explosion_2
       rect:
         serializedVersion: 2
-        x: 222
-        y: 0
-        width: 32
-        height: 96
+        x: 897
+        y: 6
+        width: 120
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,41 +234,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5530d85aec5642a10800000000000000
-      internalID: 1883742482362860373
+      spriteID: 8e793b9066c9c58c0800000000000000
+      internalID: -4009157606203222040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_3
+      name: explosion_3
       rect:
         serializedVersion: 2
-        x: 276
-        y: 79
-        width: 10
-        height: 13
+        x: 1027
+        y: 6
+        width: 120
+        height: 122
       alignment: 9
-      pivot: {x: -0.66438293, y: 0.28925207}
+      pivot: {x: 0.49510092, y: 0.50000006}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ebbf020285a17c50800000000000000
-      internalID: 6661287301656591333
+      spriteID: bd59c84e6a6c6c330800000000000000
+      internalID: 3730887761424324059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_4
+      name: explosion_4
       rect:
         serializedVersion: 2
-        x: 294
-        y: 0
-        width: 82
-        height: 96
+        x: 1149
+        y: 6
+        width: 130
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efc26c445466a0f50800000000000000
-      internalID: 6848398631062875390
+      spriteID: 74f4433104cdd9bb0800000000000000
+      internalID: -4927540249515241657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_5
+      name: explosion_8
       rect:
         serializedVersion: 2
-        x: 267
-        y: 47
-        width: 14
-        height: 12
+        x: 1409
+        y: 6
+        width: 122
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,20 +297,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f498e03df75daf80800000000000000
-      internalID: -8093716210356022030
+      spriteID: e163ca9cf10ff2d00800000000000000
+      internalID: 950242065716622878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_6
+      name: explosion_10
       rect:
         serializedVersion: 2
-        x: 273
-        y: 14
-        width: 10
-        height: 13
+        x: 270
+        y: 3
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,20 +318,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f5e0e9097c96dfd0800000000000000
-      internalID: -2317492914564831755
+      spriteID: 0e38af8f9f50675b0800000000000000
+      internalID: -5371098934410574880
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_7
+      name: explosion_13
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 96
-        height: 96
+        x: 525
+        y: 6
+        width: 100
+        height: 105
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,20 +339,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05737781d74e4a770800000000000000
-      internalID: 8621266812626483024
+      spriteID: 2b673df1a377b9020800000000000000
+      internalID: 2349602722129606322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_8
+      name: explosion_14
       rect:
         serializedVersion: 2
-        x: 262
-        y: 37
-        width: 14
-        height: 12
+        x: 1282
+        y: 6
+        width: 120
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,20 +360,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8877c2ec06a3b7f80800000000000000
-      internalID: -8107822516700153976
+      spriteID: cabe29ee83df0eb60800000000000000
+      internalID: 7773491377804077996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_9
+      name: explosion_15
       rect:
         serializedVersion: 2
-        x: 276
-        y: 32
-        width: 8
-        height: 11
+        x: 398
+        y: 3
+        width: 100
+        height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f70d7b9b010c9aec0800000000000000
-      internalID: -3555099252764454785
+      spriteID: 53a69ab4acafc5410800000000000000
+      internalID: 1467323325375670837
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_10
+      name: explosion_18
       rect:
         serializedVersion: 2
-        x: 272
-        y: 1
-        width: 6
-        height: 9
+        x: 142
+        y: 7
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,41 +402,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba0820ab584a967b0800000000000000
-      internalID: -5230468597955788629
+      spriteID: a22a2e1ac67777730800000000000000
+      internalID: 3996794502770762282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wall_droken_anime_11
+      name: explosion_21
       rect:
         serializedVersion: 2
-        x: 273
-        y: 60
-        width: 15
-        height: 16
-      alignment: 9
-      pivot: {x: -2.7420084, y: 0.8424666}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c3c82ac0954b9b7c0800000000000000
-      internalID: -4055011694913352644
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_droken_anime_12
-      rect:
-        serializedVersion: 2
-        x: 266
-        y: 22
-        width: 8
-        height: 11
+        x: 14
+        y: 10
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -399,29 +423,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e5a3ee1123dfe3f0800000000000000
-      internalID: -869244063853599258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall_droken_anime_13
-      rect:
-        serializedVersion: 2
-        x: 271
-        y: 13
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe2220377ec6398f0800000000000000
-      internalID: -534964189404192017
+      spriteID: 5dcbb45c6018d7d40800000000000000
+      internalID: 5583760979089145045
       vertices: []
       indices: 
       edges: []

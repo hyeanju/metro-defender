@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Transform pos;
     private Rigidbody2D rigid;
     private SpriteRenderer spriteRenderer;
+    public GameObject bomb;
 
     private Vector3 movement;
 
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Bomb();
     }
 
     public void OnTriggerEnter2D(Collider2D other)
@@ -92,5 +94,13 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isWalkR", false);
         }
         transform.position += moveVelocity * move * Time.deltaTime;
+    }
+
+    void Bomb()
+    {
+        if (Input.GetButtonDown("Fire3"))
+        {
+            GameObject Bomb = Instantiate(bomb, pos.position, transform.rotation);
+        }
     }
 }

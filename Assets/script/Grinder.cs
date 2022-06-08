@@ -5,7 +5,11 @@ using UnityEngine;
 public class Grinder : MonoBehaviour
 {
     public float SpawnRate=0.2f;
+    public int hp = 100;
     public float MakeTime;
+    public float cooltime;
+    private float curtime;
+    public int damage = 10;
     public bool make = false;
     public int gearcount = 10;
     public GameObject gear;
@@ -48,5 +52,27 @@ public class Grinder : MonoBehaviour
                 }
             }
         }
+        if (other.tag == "Enemy")
+        {
+            if (curtime <= 0)
+            {
+                hp -= damage;
+                curtime = cooltime;
+            }
+            curtime -= Time.deltaTime;
+        }
+
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
+
+        GameManger gamemanager = FindObjectOfType<GameManger>();
+        gamemanager.EndGame();
     }
 }

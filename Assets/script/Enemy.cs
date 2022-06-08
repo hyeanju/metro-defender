@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     public float speed;
     bool move = true;
     public GameObject eneitem;
-    public Transform pos;
     public Vector2 box;
     Animator anim;
 
@@ -68,9 +67,27 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.tag == "Grinder")
+        {
+            anim.SetBool("isAtk", true);
+            anim.SetBool("isWalk", false);
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wall")
+        {
+            anim.SetBool("isAtk", false);
+            anim.SetBool("isWalk", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Grinder")
         {
             anim.SetBool("isAtk", false);
             anim.SetBool("isWalk", true);
