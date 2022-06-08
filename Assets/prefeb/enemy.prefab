@@ -105,7 +105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -323844894188294743, guid: 3fa78a0508935e4479b5b10d11982bb7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,8 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
+  damage: 1
   speed: 3
   eneitem: {fileID: 8350605299874662999, guid: be5403d718aea9541aa4a33a11a0c564, type: 3}
+  wall: {fileID: 0}
   pos: {fileID: 5422273694258021830}
   box: {x: 3, y: 3}
 --- !u!60 &2628628598088549080

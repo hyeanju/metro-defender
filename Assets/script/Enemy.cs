@@ -28,7 +28,9 @@ public class Enemy : MonoBehaviour
     {
         Vector3 vector3 = new Vector3();
         vector3.x = this.transform.position.x;
-        if(move == true)
+
+
+        if (move == true)
         {
             if (vector3.x > 0)
             {
@@ -40,6 +42,8 @@ public class Enemy : MonoBehaviour
                 transform.Translate(Vector2.left * speed * Time.deltaTime);
             }
         }
+
+    
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -48,7 +52,7 @@ public class Enemy : MonoBehaviour
 
         if (other.tag == "Ladder")
         {
-            if(enemyvec.y > 0)
+            if (enemyvec.y > 0)
             {
                 this.transform.position = new Vector3(enemyvec.x, -24, enemyvec.z);
             }
@@ -76,7 +80,7 @@ public class Enemy : MonoBehaviour
     public void GetDamage(int damage)
     {
         hp -= damage;
-        if(hp<=0)
+        if (hp <= 0)
         {
             Die();
         }

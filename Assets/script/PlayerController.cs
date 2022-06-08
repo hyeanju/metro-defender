@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float move = 5.0f;
     public bool isLeft = false;
     public int eneitem;
+    public int gear;
 
     public float cooltime;
     private float curtime;

@@ -13,7 +13,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         timeAfterSpawn = 0f;
-        spawnRate = 3f;
+        spawnRate = 7f;
     }
 
     // Update is called once per frame
